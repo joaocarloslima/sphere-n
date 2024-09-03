@@ -77,7 +77,7 @@ export async function login(prevState: any, formData: FormData) {
 }
 
 export async function getUserProfile() {
-    const response = await fetch('http://localhost:8080/users/profile', {
+    const response = await fetch('http://localhost:8082/users/profile', {
         headers: {
             'Authorization': `Bearer ${cookies().get('token')?.value}`
         }
@@ -136,7 +136,7 @@ export async function updateUser(prevState: any, formData: FormData) {
 }
 
 export async function uploadAvatar(formData: FormData) {
-    const response = await fetch('http://localhost:8080/users/avatar', {
+    const response = await fetch('http://localhost:8082/users/avatar', {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${cookies().get('token')?.value}`
