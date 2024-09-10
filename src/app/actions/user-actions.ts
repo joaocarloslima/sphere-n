@@ -160,7 +160,7 @@ export async function uploadAvatar(formData: FormData) {
 }
 
 export async function searchUsers(name: string) {
-    const response = await fetch(`http://localhost:8080/users?name=${name}`, {
+    const response = await fetch(`http://localhost:8082/users?name=${name}`, {
         headers: {
             "Authorization": `Bearer ${cookies().get('token')?.value}`
         }
